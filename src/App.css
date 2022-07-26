@@ -1,6 +1,7 @@
 body {
   font-family: "Josefin Sans";
   background-color: #fffafb;
+  overflow-x: hidden;
 }
 
 *{
@@ -33,7 +34,7 @@ body {
 }
 
 .right-arrow {
-  right: 140px;
+  right: 120px;
 }
 
 .right-arrow:hover,
@@ -104,6 +105,11 @@ body {
   text-decoration: none;
 }
 
+
+.react-horizontal-scrolling-menu--scroll-container {
+  width: 45%;
+}
+
 @media screen and (max-width: 1200px) {
   .detail-image {
     width: 300px;
@@ -136,5 +142,16 @@ body {
 @media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 300px;
+  }
+
+  .right-arrow,
+  .left-arrow{
+    font-size: 15px;
   }
 }
