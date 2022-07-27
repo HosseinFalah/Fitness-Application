@@ -34,7 +34,7 @@ body {
 }
 
 .right-arrow {
-  right: 120px;
+  right: 140px;
 }
 
 .right-arrow:hover,
@@ -105,9 +105,12 @@ body {
   text-decoration: none;
 }
 
-
 .react-horizontal-scrolling-menu--scroll-container {
-  width: 45%;
+  display: flex;
+  height: max-content;
+  overflow-y: hidden;
+  position: relative;
+  width: 50%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -142,16 +145,5 @@ body {
 @media screen and (max-width: 400px) {
   .exercise-card {
     width: 280px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .react-horizontal-scrolling-menu--scroll-container {
-    width: 300px;
-  }
-
-  .right-arrow,
-  .left-arrow{
-    font-size: 15px;
   }
 }
