@@ -1,8 +1,7 @@
+import { v4 as uuidv4 } from 'uuid';
 import { Box, Stack, Typography } from "@mui/material";
 
 const ExerciseVideo = ({ exerciseVideos, name }) => {
-
-    console.log(exerciseVideos);
 
     if(!exerciseVideos.length) return "Loading ..."
 
@@ -12,9 +11,9 @@ const ExerciseVideo = ({ exerciseVideos, name }) => {
                 Watch <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>{name}</span> exercise videos
             </Typography>
             <Stack sx={{ flexDirection: { lg: 'row' }, gap: { lg: '110px', xs: '0px' } }} justifyContent="flex-start" flexWrap="wrap" alignItems="center">
-                {exerciseVideos?.slice(0, 3)?.map((item, index) => (
+                {exerciseVideos?.slice(0, 6)?.map((item) => (
                 <a
-                    key={index}
+                    key={uuidv4()}
                     className="exercise-video"
                     href={`https://www.youtube.com/watch?v=${item.video.videoId}`}
                     target="_blank"

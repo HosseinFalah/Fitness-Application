@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { Typography, Stack, Button } from "@mui/material";
 
 import BodyPartImage from "../assets/icons/body-part.png";
@@ -40,7 +41,7 @@ const Detail = ({ exerciseDetail }) => {
                     <br /> mood and gain energy.
                 </Typography>
                 {extraDetail.map((item) => (
-                    <Stack key={item.name} direction="row" gap="24px" alignItems="center">
+                    <Stack key={uuidv4()} direction="row" gap="24px" alignItems="center">
                         <Button 
                             sx={{
                                 background: "#fff2db", 
